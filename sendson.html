@@ -3,60 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Single File App</title>
+    <title>My App - Downloads</title>
     
     <!-- CSS Kodları -->
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
         }
         .container {
             width: 80%;
-            margin: 50px auto;
-            background-color: #fff;
+            margin: 20px auto;
+            background-color: white;
             padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            text-align: center;
+        .version {
+            background-color: #f8f8f8;
+            border-left: 5px solid #4CAF50;
+            margin-bottom: 20px;
+            padding: 15px;
         }
-        button {
+        .version h3 {
+            margin-top: 0;
+        }
+        .btn {
             background-color: #4CAF50;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+            padding: 12px 20px;
+            text-decoration: none;
             border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
         }
-        button:hover {
+        .btn:hover {
             background-color: #45a049;
         }
-        .output {
-            margin-top: 20px;
-            padding: 10px;
+        .update-log {
+            margin-top: 30px;
+        }
+        .update-log ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .update-log li {
             background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-left: 5px solid #2196F3;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>My Simple App</h1>
-        <button id="clickButton">Click Me</button>
-        <div class="output" id="output"></div>
-    </div>
+    <header>
+        <h1>My App - Download Center</h1>
+        <p>Get the latest version of My App</p>
+    </header>
 
-    <!-- JavaScript Kodları -->
-    <script>
-        document.getElementById("clickButton").addEventListener("click", function() {
-            document.getElementById("output").textContent = "Button clicked!";
-        });
-    </script>
+    <div class="container">
+        <!-- Latest Version -->
+        <div class="version">
+            <h3>Latest Version: 1.2.0</h3>
+            <p>New features and bug fixes</p>
+            <a href="link_to_download.exe" class="btn">Download Now</a>
+        </div>
+
+        <!-- Previous Versions -->
+        <div class="version">
+            <h3>Previous Version: 1.1.5</h3>
+            <p>Minor updates and improvements</p>
+            <a href="link_to_download_previous.exe" class="btn">Download</a>
+        </div>
+
+        <!-- Update Log -->
+        <div class="update-log">
+            <h3>Update Log</h3>
+            <ul>
+                <li><strong>Version 1.2.0</strong> - Added new features and fixed bugs.</li>
+                <li><strong>Version 1.1.5</strong> - Improved stability and performance.</li>
+                <li><strong>Version 1.1.0</strong> - Initial release with basic functionality.</li>
+            </ul>
+        </div>
+    </div>
 
 </body>
 </html>
